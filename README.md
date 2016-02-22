@@ -1,69 +1,70 @@
-# AndroidÖªÊ¶ÕûÀí
-[toc]
-#ÍøÂç¿â
 
-1¡¢HttpUrlConnection<br>
+#Androidå¼€å‘
+##ç½‘ç»œåº“
 
-2¡¢volley<br>
-Volley,ËüÊÇandroid¿ª·¢ÍÅ¶ÓÔÚ2013ÄêGoogle I/O´ó»áÉÏÍÆ³öÁËÒ»¸öĞÂµÄÍøÂçÍ¨ĞÅ¿ò¼Ü
-Volley¿ÉÒÔËµÊÇ°ÑAsyncHttpClientºÍUniversal-Image-LoaderµÄÓÅµã¼¯ÓÚÁËÒ»Éí£¬¼È¿ÉÒÔÏñAsyncHttpClientÒ»Ñù·Ç³£¼òµ¥µØ½øĞĞHTTPÍ¨ĞÅ£¬
-Ò²¿ÉÒÔÏñUniversal-Image-LoaderÒ»ÑùÇáËÉ¼ÓÔØÍøÂçÉÏµÄÍ¼Æ¬¡£³ıÁË¼òµ¥Ò×ÓÃÖ®Íâ£¬VolleyÔÚĞÔÄÜ·½ÃæÒ²½øĞĞÁË´ó·ù¶ÈµÄµ÷Õû£¬
-ËüµÄÉè¼ÆÄ¿±ê¾ÍÊÇ·Ç³£ÊÊºÏÈ¥½øĞĞÊı¾İÁ¿²»´ó£¬µ«Í¨ĞÅÆµ·±µÄÍøÂç²Ù×÷£¬¶ø¶ÔÓÚ´óÊı¾İÁ¿µÄÍøÂç²Ù×÷£¬±ÈÈçËµÏÂÔØÎÄ¼şµÈ£¬VolleyµÄ±íÏÖ¾Í»á·Ç³£Ôã¸â
+1ã€HttpUrlConnection<br>
 
-3¡¢retrofit<br>
-RetrofitÖ§³ÖÍ¬²½ºÍÒì²½Á½ÖÖ·½Ê½£¬ÔÚÊ¹ÓÃÊ±£¬ĞèÒª½«ÇëÇóµØÖ·×ª»»Îª½Ó¿Ú£¬Í¨¹ı×¢½âÀ´Ö¸¶¨ÇëÇó·½·¨£¬ÇëÇó²ÎÊı£¬ÇëÇóÍ·£¬·µ»ØÖµµÈĞÅÏ¢¡£
+2ã€[volley](https://github.com/mcxiaoke/android-volley "volley")<br>
+Volley,å®ƒæ˜¯androidå¼€å‘å›¢é˜Ÿåœ¨2013å¹´Google I/Oå¤§ä¼šä¸Šæ¨å‡ºäº†ä¸€ä¸ªæ–°çš„ç½‘ç»œé€šä¿¡æ¡†æ¶
+Volleyå¯ä»¥è¯´æ˜¯æŠŠAsyncHttpClientå’ŒUniversal-Image-Loaderçš„ä¼˜ç‚¹é›†äºäº†ä¸€èº«ï¼Œæ—¢å¯ä»¥åƒAsyncHttpClientä¸€æ ·éå¸¸ç®€å•åœ°è¿›è¡ŒHTTPé€šä¿¡ï¼Œ
+ä¹Ÿå¯ä»¥åƒUniversal-Image-Loaderä¸€æ ·è½»æ¾åŠ è½½ç½‘ç»œä¸Šçš„å›¾ç‰‡ã€‚é™¤äº†ç®€å•æ˜“ç”¨ä¹‹å¤–ï¼ŒVolleyåœ¨æ€§èƒ½æ–¹é¢ä¹Ÿè¿›è¡Œäº†å¤§å¹…åº¦çš„è°ƒæ•´ï¼Œ
+å®ƒçš„è®¾è®¡ç›®æ ‡å°±æ˜¯éå¸¸é€‚åˆå»è¿›è¡Œæ•°æ®é‡ä¸å¤§ï¼Œä½†é€šä¿¡é¢‘ç¹çš„ç½‘ç»œæ“ä½œï¼Œè€Œå¯¹äºå¤§æ•°æ®é‡çš„ç½‘ç»œæ“ä½œï¼Œæ¯”å¦‚è¯´ä¸‹è½½æ–‡ä»¶ç­‰ï¼ŒVolleyçš„è¡¨ç°å°±ä¼šéå¸¸ç³Ÿç³•
 
-4¡¢okhttp<br>
-okhttp ÊÇÒ»¸ö Java µÄ HTTP+SPDY ¿Í»§¶Ë¿ª·¢°ü£¨ÀàËÆHttpClientµÄ½ÇÉ«£©£¬Í¬Ê±Ò²Ö§³Ö Android¡£ĞèÒªAndroid 2.3ÒÔÉÏ¡£
-ÌØµã
-OKHttpÊÇAndroid°æHttp¿Í»§¶Ë¡£·Ç³£¸ßĞ§£¬Ö§³ÖSPDY¡¢Á¬½Ó³Ø¡¢GZIPºÍ HTTP »º´æ¡£
-Ä¬ÈÏÇé¿öÏÂ£¬OKHttp»á×Ô¶¯´¦Àí³£¼ûµÄÍøÂçÎÊÌâ£¬Ïñ¶ş´ÎÁ¬½Ó¡¢SSLµÄÎÕÊÖÎÊÌâ¡£
-Èç¹ûÄãµÄÓ¦ÓÃ³ÌĞòÖĞ¼¯³ÉÁËOKHttp£¬RetrofitÄ¬ÈÏ»áÊ¹ÓÃOKHttp´¦ÀíÆäËûÍøÂç²ãÇëÇó¡£
-´ÓAndroid4.4¿ªÊ¼HttpURLConnectionµÄµ×²ãÊµÏÖ²ÉÓÃµÄÊÇokHttp.
+3ã€[retrofit](https://github.com/square/retrofit "retrofit")<br>
+Retrofitæ”¯æŒåŒæ­¥å’Œå¼‚æ­¥ä¸¤ç§æ–¹å¼ï¼Œåœ¨ä½¿ç”¨æ—¶ï¼Œéœ€è¦å°†è¯·æ±‚åœ°å€è½¬æ¢ä¸ºæ¥å£ï¼Œé€šè¿‡æ³¨è§£æ¥æŒ‡å®šè¯·æ±‚æ–¹æ³•ï¼Œè¯·æ±‚å‚æ•°ï¼Œè¯·æ±‚å¤´ï¼Œè¿”å›å€¼ç­‰ä¿¡æ¯ã€‚
 
-**ÌØ±ğËµÃ÷**<br>
-android2.2Ö®ºó²»½¨ÒéÊ¹ÓÃHttp Client,°üÀ¨»ùÓÚHttpClientµÄ¿ªÔ´ÍøÂç¿â:<br>
-1¡¢HttpClient<br>
+4ã€[okhttp](https://github.com/square/okhttp)<br>
+okhttp æ˜¯ä¸€ä¸ª Java çš„ HTTP+SPDY å®¢æˆ·ç«¯å¼€å‘åŒ…ï¼ˆç±»ä¼¼HttpClientçš„è§’è‰²ï¼‰ï¼ŒåŒæ—¶ä¹Ÿæ”¯æŒ Androidã€‚éœ€è¦Android 2.3ä»¥ä¸Šã€‚
+ç‰¹ç‚¹
+OKHttpæ˜¯Androidç‰ˆHttpå®¢æˆ·ç«¯ã€‚éå¸¸é«˜æ•ˆï¼Œæ”¯æŒSPDYã€è¿æ¥æ± ã€GZIPå’Œ HTTP ç¼“å­˜ã€‚
+é»˜è®¤æƒ…å†µä¸‹ï¼ŒOKHttpä¼šè‡ªåŠ¨å¤„ç†å¸¸è§çš„ç½‘ç»œé—®é¢˜ï¼ŒåƒäºŒæ¬¡è¿æ¥ã€SSLçš„æ¡æ‰‹é—®é¢˜ã€‚
+å¦‚æœä½ çš„åº”ç”¨ç¨‹åºä¸­é›†æˆäº†OKHttpï¼ŒRetrofité»˜è®¤ä¼šä½¿ç”¨OKHttpå¤„ç†å…¶ä»–ç½‘ç»œå±‚è¯·æ±‚ã€‚
+ä»Android4.4å¼€å§‹HttpURLConnectionçš„åº•å±‚å®ç°é‡‡ç”¨çš„æ˜¯okHttp.
 
-2¡¢android-async-http<br>
-ÌØµã
-ËùÒÔÇëÇóÔÚ×ÓÏß³ÌÖĞÍê³É£¬ÇëÇó»Øµ÷ÔÚµ÷ÓÃ¸ÃÇëÇóµÄÏß³ÌÖĞÍê³É
-Ê¹ÓÃÏß³Ì³Ø
-Ê¹ÓÃRequestParamsÀà·â×°ÇëÇó²ÎÊı
-Ö§³ÖÎÄ¼şÉÏ´«
-³Ö¾Ã»¯cookieµ½SharedPreferences£¬¸öÈË¸Ğ¾õÕâÒ»µãÒ²ÊÇÕâ¸ö¿âµÄÖØÒªÌØµã£¬¿ÉÒÔºÜ·½±ãµÄÍê³ÉÒ»Ğ©Ä£ÄâµÇÂ¼
-Ö§³Öjson
-Ö§³ÖHTTP Basic Auth
+**ç‰¹åˆ«è¯´æ˜**<br>
+android2.2ä¹‹åä¸å»ºè®®ä½¿ç”¨Http Client,åŒ…æ‹¬åŸºäºHttpClientçš„å¼€æºç½‘ç»œåº“:<br>
+1ã€HttpClient<br>
+
+2ã€android-async-http<br>
+ç‰¹ç‚¹
+æ‰€ä»¥è¯·æ±‚åœ¨å­çº¿ç¨‹ä¸­å®Œæˆï¼Œè¯·æ±‚å›è°ƒåœ¨è°ƒç”¨è¯¥è¯·æ±‚çš„çº¿ç¨‹ä¸­å®Œæˆ
+ä½¿ç”¨çº¿ç¨‹æ± 
+ä½¿ç”¨RequestParamsç±»å°è£…è¯·æ±‚å‚æ•°
+æ”¯æŒæ–‡ä»¶ä¸Šä¼ 
+æŒä¹…åŒ–cookieåˆ°SharedPreferencesï¼Œä¸ªäººæ„Ÿè§‰è¿™ä¸€ç‚¹ä¹Ÿæ˜¯è¿™ä¸ªåº“çš„é‡è¦ç‰¹ç‚¹ï¼Œå¯ä»¥å¾ˆæ–¹ä¾¿çš„å®Œæˆä¸€äº›æ¨¡æ‹Ÿç™»å½•
+æ”¯æŒjson
+æ”¯æŒHTTP Basic Auth
   
-#Í¼Æ¬¿â
+##å›¾ç‰‡åº“
 
 **[Universal-Image-Loader][1]**<br>
-µØÖ·£ºhttps://github.com/nostra13/Android-Universal-Image-Loader
+
 
 **[Volley][2]**<br>
-µØÖ·£ºhttps://github.com/mcxiaoke/android-volley
-²ÎÕÕ£ºImageRequest¡¢ImageLoader¡¢NetworkImageView
+
+
+å‚ç…§ï¼šImageRequestã€ImageLoaderã€NetworkImageView
 
 **[Fresco][3]**<br>
-µØÖ·£ºhttps://github.com/facebook/fresco
+
 
 **[Picasso][4]**<br>
-µØÖ·£ºhttps://github.com/square/picasso
+
 
 **[Glide][5]**<br>
-µØÖ·£ºhttps://github.com/bumptech/glide
+
 
 **[DroidParts][6]** <br>
-µØÖ·£ºhttps://github.com/yanchenko/droidparts
-²ÎÕÕ£ºImageFetcher
+
+å‚ç…§ï¼šImageFetcher
 
 **[UrlImageViewHelper][7]**<br>
-µØÖ·£ºhttps://github.com/koush/UrlImageViewHelper
+
 
 **[AndroidQuery][8]** <br>
-²ÎÕÕ:ImageLoading
+å‚ç…§:ImageLoading
 
-#×¢½â¿ª·¢
+##æ³¨è§£å¼€å‘
  
 **[AndroidAnntations][9]**<br>
 
@@ -71,7 +72,143 @@ android2.2Ö®ºó²»½¨ÒéÊ¹ÓÃHttp Client,°üÀ¨»ùÓÚHttpClientµÄ¿ªÔ´ÍøÂç¿â:<br>
 
 **[Butterknife][11]**<br>
 
+##çƒ­ä¿®å¤
+###ä¸€ã€çƒ­ä¿®å¤åŸç†
+[http://blog.csdn.net/lmj623565791/article/details/49883661](http://blog.csdn.net/lmj623565791/article/details/49883661)
+ 
+1ã€å®‰å“Appçƒ­è¡¥ä¸åŠ¨æ€ä¿®å¤æŠ€æœ¯ä»‹ç» <br>
+[https://mp.weixin.qq.com/s?__biz=MzI1MTA1MzM2Nw==&mid=400118620&idx=1&sn=b4fdd5055731290eef12ad0d17f39d4a&scene=1&srcid=1106Imu9ZgwybID13e7y2nEi#wechat_redirect](https://mp.weixin.qq.com/s?__biz=MzI1MTA1MzM2Nw==&mid=400118620&idx=1&sn=b4fdd5055731290eef12ad0d17f39d4a&scene=1&srcid=1106Imu9ZgwybID13e7y2nEi#wechat_redirect)
 
+2ã€Android dexåˆ†åŒ…æ–¹æ¡ˆ <br>
+[http://my.oschina.net/853294317/blog/308583](http://my.oschina.net/853294317/blog/308583)
+
+###äºŒã€çƒ­è¡¥ä¸åŠ¨æ€ä¿®å¤å¼€æºæ¡†æ¶
+1ã€AndFix <br>
+[https://github.com/alibaba/AndFix](https://github.com/alibaba/AndFix)
+
+ç›¸å…³æ–‡æ¡£ <br>
+[http://blog.csdn.net/qxs965266509/article/details/49802429](http://blog.csdn.net/qxs965266509/article/details/49802429)
+
+2ã€HotFix <br>
+[https://github.com/dodola/HotFix](https://github.com/dodola/HotFix)    
+
+3ã€DroidFix <br>
+[https://github.com/bunnyblue/DroidFix](https://github.com/bunnyblue/DroidFix)  
+
+
+4ã€Nuwa  <br>
+[https://github.com/jasonross/Nuwa](https://github.com/jasonross/Nuwa)
+
+##æ’ä»¶åŒ–å¼€å‘
+åˆ©ç”¨DexClassLoaderåŠ¨æ€åŠ è½½æœ¬åœ°apk
+
+##Rxjava
+åœ°å€ï¼š[https://github.com/ReactiveX/RxJava](https://github.com/ReactiveX/RxJava)
+
+å‚è€ƒ <br>
+[http://blog.csdn.net/lzyzsd/article/details/41833541](http://blog.csdn.net/lzyzsd/article/details/41833541)
+
+##ReactNative-Android
+
+
+#ç‰ˆæœ¬æµ‹è¯•
+
+##ä¸€ã€è‡ªåŠ¨åŒ–æµ‹è¯•å¹³å°
+1ã€Testinäº‘æµ‹è¯•å¹³å°<br>
+å¯å…è´¹æä¾›å…¼å®¹æ€§æµ‹è¯•
+
+2ã€ç™¾åº¦ç§»åŠ¨APPæµ‹è¯•æœåŠ¡<br>
+å¯å…è´¹æä¾›è‡ªåŠ¨åŒ–æµ‹è¯•å’Œäººå·¥æµ‹è¯•<br>
+https://console.bce.baidu.com/mat/manualTest/home/tasklist
+
+3ã€BugTags <br>
+https://bugtags.com/
+
+4ã€è…¾è®¯Bugly <br>
+http://bugly.qq.com/?bref=sdkcn
+è…¾è®¯Buglyï¼Œé¢å‘ç§»åŠ¨å¼€å‘è€…æä¾›æœ€ä¸“ä¸šçš„Crashç›‘æ§ã€å´©æºƒåˆ†æç­‰è´¨é‡è·Ÿè¸ªæœåŠ¡ï¼Œä¸ºæ‚¨ä¿®å¤ç”¨æˆ·çš„æ¯ä¸€æ¬¡Crashï¼
+
+##äºŒã€åº”ç”¨æ€§èƒ½ç®¡ç†APM
+
+ç™¾åº¦ç™¾ç§‘ï¼šhttp://baike.baidu.com/link?url=WTSG1fVrdrBChzvRZ3L23qjRCoZEX2a2v-0wdiCJGZph8C1OgMAI-fiwVqCfP0328lux8PTK1oc-6eBlZiVYna
+
+åº”ç”¨æ€§èƒ½ç®¡ç†ï¼ˆApplication Performance Managementï¼‰æ˜¯ä¸€ä¸ªæ¯”è¾ƒæ–°çš„ç½‘ç»œç®¡ç†æ–¹å‘ï¼Œä¸»è¦æŒ‡å¯¹ä¼ä¸šçš„å…³é”®ä¸šåŠ¡åº”ç”¨è¿›è¡Œç›‘æµ‹ã€ä¼˜åŒ–ï¼Œ
+æé«˜ä¼ä¸šåº”ç”¨çš„å¯é æ€§å’Œè´¨é‡ï¼Œä¿è¯ç”¨æˆ·å¾—åˆ°è‰¯å¥½çš„æœåŠ¡ï¼Œé™ä½ITæ€»æ‹¥æœ‰æˆæœ¬(TCO)ã€‚ä½¿ç”¨å…¨ä¸šåŠ¡é“¾çš„æ•æ·APMç›‘æ§ï¼Œå¯ä½¿ä¸€ä¸ªä¼ä¸šçš„å…³é”®ä¸šåŠ¡åº”ç”¨çš„æ€§èƒ½æ›´å¼ºå¤§ï¼Œ
+å¯ä»¥æé«˜ç«äº‰åŠ›ï¼Œå¹¶å–å¾—å•†ä¸šæˆåŠŸï¼Œå› æ­¤ï¼ŒåŠ å¼ºåº”ç”¨æ€§èƒ½ç®¡ç†ï¼ˆAPMï¼‰å¯ä»¥äº§ç”Ÿå·¨å¤§å•†ä¸šåˆ©ç›Šã€‚
+å›½å†…å¤–çš„APMæœ‰Compuwareã€iMasterã€å¬äº‘ã€New Relicã€äº‘æ™ºæ…§ã€OneAPMã€AppDynamicsç­‰ã€‚
+
+https://www.sdk.cn/datas?category_id=110207
+
+1ã€[è…¾è®¯Bugly](http://bugly.qq.com/?bref=sdkcn) <br>
+
+
+2ã€[å¬äº‘APP](http://www.tingyun.com/tingyun_app.html) <br>
+
+
+3ã€[ç™¾åº¦APM](https://bce.baidu.com/product/apm.html) <br>
+
+
+4ã€[Testinç§»åŠ¨åº”ç”¨æ€§èƒ½ç®¡ç†](http://crash.testin.cn/) <br>
+
+
+5ã€[oneapm](http://www.oneapm.com/mi/android.html) <br>
+
+
+6ã€[é€è§†å®](http://www.toushibao.com/mobile.html) <br>
+
+
+##ä¸‰ã€å†…å­˜æ³„éœ²æ£€æµ‹å·¥å…· <br>
+1ã€[LeakCanary](https://github.com/square/leakcanary) <br>
+
+
+2ã€MAT
+
+ç›¸å…³æŠ€æœ¯æ–‡ç« ï¼š<br>
+[https://www.sdk.cn/news/2013](https://www.sdk.cn/news/2013) <br>
+[http://ms.csdn.net/geek/51979](http://ms.csdn.net/geek/51979) <br>
+[http://blog.csdn.net/u010687392/article/details/49909477](http://blog.csdn.net/u010687392/article/details/49909477) 
+
+##å››ã€å†…æµ‹APPåˆ†å‘
+1ã€[è’²å…¬è‹±](http://www.pgyer.com/) <br>
+
+
+2ã€å‹ç›Ÿæ¸ é“å‡çº§ <br>
+æ‰“åŒ…æˆè‡ªå·±çš„æµ‹è¯•æ¸ é“ï¼Œåœ¨çº¿å‡çº§
+
+3ã€è…¾è®¯Buglyå†…æµ‹ <br>
+[http://beta.qq.com/?f=sdk](http://beta.qq.com/?f=sdk) <br>
+å¹³å°ä¼˜åŠ¿ï¼š
+è½»æ¾å®‰è£…ï¼šå¿«é€Ÿå‘å¸ƒè‡³QQä¸å¾®ä¿¡ç›´æ¥ä¸‹è½½å®‰è£…ï¼Œæ— éœ€å¦å¤–æ‰“å¼€æµè§ˆå™¨
+è®¿é—®æ§åˆ¶ï¼šæŒ‰QQå·éªŒè¯ç”¨æˆ·èº«ä»½ï¼Œç²¾ç¡®æ§åˆ¶ç‰ˆæœ¬è®¿é—®æƒé™
+æé€Ÿä¸‹è½½ï¼šä¾æ‰˜è…¾è®¯CDNå®ç°å…¨ç½‘è¦†ç›–ï¼Œå…¨çƒèŒƒå›´å†…ç”¨æˆ·å‡å¯é«˜é€Ÿä¸‹è½½
+
+##äº”ã€ç›‘æ§
+1ã€ç§»åŠ¨åº”ç”¨é”™è¯¯ç›‘æ§ <br>
+https://www.sdk.cn/datas?category_id=110209
+
+2ã€æ€§èƒ½ç›‘æ§ APM <br>
+https://www.sdk.cn/datas?category_id=110207
+
+
+#å¼€å‘å¸¸ç”¨å·¥å…·ç¯‡
+
+ä½œä¸šéƒ¨è½ <br>
+[www.zybuluo.com](www.zybuluo.com)
+
+ç®€ä¹¦ <br>
+[http://www.jianshu.com/](http://www.jianshu.com/)
+
+#å›¢é˜Ÿåä½œåŠå…¬
+
+[Tower](https://tower.im/) <br>
+
+
+[teambition](https://www.teambition.com/) <br>
+
+
+æ˜é“OA
+
+ç¦…é“
 
   [1]: https://github.com/nostra13/Android-Universal-Image-Loader
   [2]: https://github.com/mcxiaoke/android-volley
