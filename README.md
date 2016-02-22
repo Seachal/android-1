@@ -1,6 +1,6 @@
 # Android知识整理
 
- - **网络库**
+ - **网络库**<br>
 
 1、HttpUrlConnection<br>
 
@@ -21,7 +21,7 @@ OKHttp是Android版Http客户端。非常高效，支持SPDY、连接池、GZIP和 HTTP 缓存。
 如果你的应用程序中集成了OKHttp，Retrofit默认会使用OKHttp处理其他网络层请求。
 从Android4.4开始HttpURLConnection的底层实现采用的是okHttp.
 
-**Android不推荐使用的基于HttpClient网络库**
+**Android不推荐使用的基于HttpClient网络库**<br>
 android2.2之后不建议使用Http Client
 1、HttpClient
 
@@ -36,7 +36,7 @@ android2.2之后不建议使用Http Client
 支持HTTP Basic Auth
   
  
- - **网络图片加载库**
+ - **网络图片加载库**<br>
 
 **[Universal-Image-Loader][1]**<br>
 地址：https://github.com/nostra13/Android-Universal-Image-Loader
@@ -56,8 +56,8 @@ android2.2之后不建议使用Http Client
 
 **[DroidParts][6]** <br>
 地址：https://github.com/yanchenko/droidparts
-
 参照：ImageFetcher
+
 **[UrlImageViewHelper][7]**<br>
 地址：https://github.com/koush/UrlImageViewHelper
 
@@ -65,6 +65,7 @@ android2.2之后不建议使用Http Client
 参照:ImageLoading
 
  - **注解开发**
+ 
 **[AndroidAnntations][9]**<br>
 
 **[Dagger][10]**<br>
