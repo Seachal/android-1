@@ -1,6 +1,6 @@
 # Android知识整理
 [toc]
-### 1.网络库
+#网络库
 
 1、HttpUrlConnection<br>
 
@@ -35,7 +35,7 @@ android2.2之后不建议使用Http Client,包括基于HttpClient的开源网络库:<br>
 支持json
 支持HTTP Basic Auth
   
- ### 2. 图片库
+#图片库
 
 **[Universal-Image-Loader][1]**<br>
 地址：https://github.com/nostra13/Android-Universal-Image-Loader
@@ -63,7 +63,7 @@ android2.2之后不建议使用Http Client,包括基于HttpClient的开源网络库:<br>
 **[AndroidQuery][8]** <br>
 参照:ImageLoading
 
- - **注解开发**
+#注解开发
  
 **[AndroidAnntations][9]**<br>
 
