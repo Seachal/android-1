@@ -1,0 +1,67 @@
+市场渠道   渠道代码
+BB官网     offical
+360        360
+应用宝     yingyongbao
+豌豆荚     wandoujia
+百度       baidu
+安卓市场   anzhuo
+91手机     91
+安智市场   anzhi 
+应用汇     yingyonghui
+小米市场   xiaomi
+联想市场   lenovo
+华为市场   huawei
+
+
+测试渠道:bb_test
+
+
+
+--------------------------------腾讯多渠道打包配置----------------
+打开工具，打包方式选择"AndroidManifest.xml"，打包参数配置如下：
+UMENG_CHANNEL=offical
+UMENG_CHANNEL=baidu
+UMENG_CHANNEL=91
+UMENG_CHANNEL=360
+UMENG_CHANNEL=yingyongbao
+UMENG_CHANNEL=wandoujia
+UMENG_CHANNEL=anzhuo
+UMENG_CHANNEL=anzhi
+UMENG_CHANNEL=yingyonghui
+UMENG_CHANNEL=xiaomi
+UMENG_CHANNEL=lenovo
+UMENG_CHANNEL=huawei
+
+
+
+
+
+
+
+
+
+
+各大市场登录账号
+360            http://dev.360.cn/   public@bbchexian.com/hecheng8888
+安智           http://dev.anzhi.com/    az58188757/hecheng8888    public@bbchexian.com
+百度           http://app.baidu.com/apps/    public@bbchexian.com/hecheng8888
+91              http://developer.baidu.com/    public@bbchexian.com/hecheng8888
+安卓市场    http://developer.baidu.com/    public@bbchexian.com/hecheng8888
+华为           http://developer.huawei.com/    public@bbchexian.com/hckjM705
+联想           http://open.lenovo.com/developer/    public@bbchexian.com/hecheng8888
+豌豆荚        http://open.wandoujia.com/home/myapp    public@bbchexian.com/hecheng8888
+（拨打电话：用户可以直接点击APP中的电话号码来开始呼叫）
+小米           https://dev.mi.com/index    13911187928/hecheng8888
+应用宝       http://open.qq.com/    3241189440/hechengkeji705
+应用汇       http://dev.appchina.com/  public@bbchexian.com/hecheng8888
+
+iTunes        https://itunesconnect.apple.com public@bbchexian.com/Zhubang2km705 
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+
+一、为保证code style 统一请大家按如下步骤操作
+1.120limit
+	Window->preferences->General->Editors->Text Editors
+		show print margin 打钩
+		print margin colum:120
+	
+2.CodeTemplates.xml //去掉eclipse默认生成的//TODO 之类注释
+	Window->preferences->Java->CodeStyle->Code Templates->Import
+	
+3.CodeFormatter.xml //按我们的代码规范定义的格式化文档
+	Window->preferences->Java->CodeStyle->Formatter->Import
+	
+4.请常用ctrl+shift+f格式化代码
+
+5.如有修改CodeFormatter.xml,Codetemplates.xml 请提交SVN,并周知大家更换
+
+6.java->editor->save actions->保存时自动格式化，方便使用
