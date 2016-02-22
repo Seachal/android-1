@@ -121,8 +121,8 @@ android2.2之后不建议使用Http Client,包括基于HttpClient的开源网络
 可免费提供自动化测试和人工测试<br>
 https://console.bce.baidu.com/mat/manualTest/home/tasklist
 
-3、BugTags <br>
-https://bugtags.com/
+3、[BugTags](https://bugtags.com/) <br>
+
 
 4、腾讯Bugly <br>
 http://bugly.qq.com/?bref=sdkcn
