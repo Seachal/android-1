@@ -1,5 +1,10 @@
-
-#Android开发
+Android开发
+====================
+>目前包括：
+[开发篇](https://github.com/zhangquanit/android#开源类库)
+[测试篇](https://github.com/zhangquanit/android#测试篇)
+[工具篇](https://github.com/zhangquanit/android#工具篇)
+#开源类库
 ##网络库
 
 1、HttpUrlConnection<br>
@@ -111,7 +116,7 @@ android2.2之后不建议使用Http Client,包括基于HttpClient的开源网络
 ##ReactNative-Android
 
 
-#版本测试
+#测试篇
 
 ##一、自动化测试平台
 1、Testin云测试平台<br>
@@ -190,15 +195,15 @@ https://www.sdk.cn/datas?category_id=110209
 https://www.sdk.cn/datas?category_id=110207
 
 
-#开发常用工具篇
+#工具篇
+##一、在线编辑网站
+[作业部落](www.zybuluo.com) <br>
+提供在线MarkDown在线编辑器，可用于编写技术文档之类的。
 
-作业部落 <br>
-[www.zybuluo.com](www.zybuluo.com)
+[简书](http://www.jianshu.com/) <br>
+技术分享型网站
 
-简书 <br>
-[http://www.jianshu.com/](http://www.jianshu.com/)
-
-#团队协作办公
+##二、团队协作办公
 
 [Tower](https://tower.im/) <br>
 
