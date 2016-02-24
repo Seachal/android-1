@@ -116,6 +116,11 @@ android2.2之后不建议使用Http Client,包括基于HttpClient的开源网络
 
 ##ReactNative-Android
 
+##工具类库
+[https://github.com/greenrobot/essentials](https://github.com/greenrobot/essentials) <br>
+xutils <br>
+[Trinea/android-common](https://github.com/Trinea/android-common) <br>
+[litesuits/android-common](https://github.com/litesuits/android-common) <br>
 
 #测试篇
 
