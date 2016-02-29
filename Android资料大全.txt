@@ -1,0 +1,46 @@
+推荐书籍
+1、Thinking In Java 中文版
+2、第一行代码    郭霖
+3、疯狂Android讲义第三版  李刚
+4、Android群英传   @Tomcat的猫
+5、Android开发艺术探索  任玉刚
+6、App研发录    包建强
+7、Android设计模式源码分析  Mr.Simple
+
+反编译
+apktool+jd-gui+dex2jar
+jadx
+Smali Viewer
+ClassyShark	
+
+
+Studio插件
+Gradle Dependencies Helper
+Statistic 统计整个项目行数的插件
+idea-markdown  在AS中编写Markdown文件，可以直接预览网页显示效果
+GsonFormat
+
+博客
+Android Developers Blog   Android官网博客
+Trinea
+胡凯
+stormzhang
+郭霖
+代码家
+light_sky
+张鸿洋
+张兴业
+hi大头鬼hi
+
+社区
+StackOverFlow
+SegmentFault
+CSDN
+eoe移动开发者社区
+APKBUS安卓巴士
+谷歌开发者社区(GDG)
+
+
+
+
+
