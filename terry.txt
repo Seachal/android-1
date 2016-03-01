@@ -1,0 +1,168 @@
+招商银行银行卡
+张全  6214850103987563 中关村支行
+北京市丰台区彩虹城二区   6-2-404
+
+http://www.vpnbook.com/webproxy
+
+代理：shadowsocks
+官网:https://portal.shadowsocks.com/clientarea.php?action=productdetails&id=8963
+
+
+客户端下载:https://shadowsocks.com/client.html
+插件教程:http://kafeinai.com/73.html
+
+
+win7创建热点：
+创建或修改密码:netsh wlan set hostednetwork mode=allow ssid=zhangquan key=cys00651
+打开网络和共享中心：选择当前联网的网络....>共享....添加新建的虚拟wifi
+开启:netsh wlan start hostednetwork
+关闭:netsh wlan stop hostednetwork
+
+Gmail邮箱：
+zhangquanit@gmail.com
+zhang196804
+
+Github账号:
+zhangquanit
+zhang196804
+
+Git代码托管:
+https://git.oschina.net
+zhangquanit@gmail.com
+zhang196804
+
+首先安装git客户端,申请github账号                                
+1、本地创建ssh key ，安装完git之后直接运行ssh命令
+ssh-keygen -t rsa -C "zhangquanit@gmail.com"  
+一路回车就行。成功的话会在~/下生成.ssh文件夹，进去，打开id_rsa.pub，复制里面的key。
+2、回到github，进入Account Settings，左边选择SSH Keys，Add SSH Key,title随便填，粘贴key。为了验证是否成功，在git bash下输入
+$ ssh -T git@github.com  
+如果是第一次的会提示是否continue，输入yes就会看到：
+You’ve successfully authenticated, but GitHub does not provide shell access 。这就表示已成功连上github。
+3、配置账号
+$ git config --global user.name "zhangquanit"  
+$ git config --global user.email "zhangquanit@gmail.com"
+
+本地仓库提交到远程仓库
+$ git remote add origin git@github.com:zhangquanit/android_test.git
+
+创建tag：
+1：切换到主干（master）
+2：开始创建标签，创建标签的两种方式：
+   1：$ git tag -a v100 -m "add v100"  //创建标签， -a 加标签，-m  加标签注释。
+   2：$ git tag v100                       //创建轻量级标签，不用-a，-m等参数
+3：查看创建的标签
+   $ git tag  //列出git中现有的所有标签
+   $ git show v100    //git show 命令查看相应标签的版本信息，并连同显示打标签时的提交对象
+4：加上-f 覆盖原有的tag
+git tag -f v100
+5：如果要一次推送所有本地新增的标签上去，可以使用 --tags 选项：$ git push origin --tags，
+普通的git push origin master操作不会推送标签到服务器端。
+推送指定的标签：$ git push origin  v100 
+6：删除标签：  git tag -d v100，删除服务器标签：git push origin :refs/tags/lilerong
+
+
+
+
+
+//.............................................................
+1.Git 全局设置:
+git config --global user.name "terry_zhang"
+git config --global user.email "zhangquanit@gmail.com"
+2.创建 git 仓库:
+mkdir umeng
+cd umeng
+git init
+touch README.md
+git add README.md
+git commit -m "first commit"
+git remote add origin https://git.oschina.net/terry_zhang/umeng.git
+git push -u origin master
+
+
+//..................................................................常用命令
+
+查询adb端口占用进程
+netstat -aon|findstr "5037"
+查询是那个应用占用的进程
+tasklist|findstr "988"
+杀死进程
+taskkill/pid 进程号 /f
+删除正在使用的文件
+cmd --输入“资源监视器”-->cpu-->关联的句柄,搜索你想删除的文件，右键 “结束进程”
+
+查看错误日志：
+adb logcat | findstr "AndroidRuntime"
+adb shell中使用:
+logcat | grep "AndroidRuntime"
+
+....................................adb shell dumpsys
+利用adb shell dumpsys这条命令来dump出系统运行时的状态信息
+1、查看栈顶的Activity
+adb shell dumpsys activity top
+adb shell dumpsys activity top grep | more   分页显示，方便查看
+2、查看当前Activity栈信息
+adb shell dumpsys activity | sed -n -e '/Stack #/p' -e '/Running activities/,/Run #0/p'
+                 
+-----------------------------------导出已安装的apk：                    
+adb pull data/app/包名-1.apk  xx.apk 
+或 adb pull data/app/包名-2.apk  xx.apk 
+比如：
+adb pull data/app/com.tencent.mm-1.apk com.tencent.mm.apk
+adb pull data/app/com.tencent.mm-2.apk com.tencent.mm.apk
+
+注意：导出的apk一般在C:\Users\zhangquan目录下
+
+//............................Java eclipse 导出doc
+Java--Eclipse中生成java doc
+　　文档注释生成中文doc方法：
+　　1.项目-->右键菜单Export-->Java下Javadoc-->next：
+　　<1>javadoc command:就是要调用的javadoc.exe，不用修改，eclipse会找到的；
+　　<2>use standard doclet:就是要生成到的目录，自定义一个文件夹作为存放目录[不然一大堆]；
+　　<3>默认即可next-->再next-->
+　　<4>此时如果项目采用的是UTF-8编码，Extra Javadoc options下需要输入设定参数：-encoding utf-8 -charset utf-8否则生成的网页中文注释都是乱码。
+　　<5>最后Finish完成。
+　　在工程的doc 目录中，就有Javadoc 文档了
+
+
+//...............................................常用工具
+查询网站流量
+http://www.alexa.cn/
+
+H5网页、游戏编辑工具
+http://www.zuiku.com/
+
+
+
+
+Monkey测试
+adb shell monkey -p com.easou.ps.lockscreen9 -v 500
+
+
+
+https://github.com/inmite/android-selector-chapek  
+
+	1. ADB Idea ADB操作快捷菜单，快速清除数据，重启应用，卸载应用等操作
+	2. Android Annotations 配合Annotation框架快速生成控件绑定代码，同Android ButterKnife Zeleny ，本来都是用ButterKnife，生成快速绑定代码，后面开发的都是Lib库没办法使用ButterKnife只好转Annotations库
+	3. Android Drawable Importer 做些小应用时妈妈再也不用担心我找不到图标了~需要配合google/material-design-icons · GitHub、Android Icons使用，安装后在设置菜单多出来的选项中设置
+	4. Android Parcelable Code Generator 如标题。快速生成Parcelable代码
+	5. Android Accessors 按照Google官方的开发规范，类的成员变量以m开头，此插件可快速生成成员变量的set/get方法但是不带m，评论中有人指出可以通过再Settings-CodeStyle-Java-CodeGeneration中修改前缀，经查验却是更加方便。
+	6. SelectorChapek for Android 插件库好多生成Selector的插件，还是这个用的最顺，按照不同状态(normal、pressed)的标准命名后，右键文件树Generate Android Selectors见inmite/android-selector-chapek · GitHub
+
+IntelliJ IDea通用
+	1. AceJump 快速跳转到屏幕某个位置（Ctrl+;）
+	2. FindBugs-IDEA、CheckStyle-IDEA 用自动化代替双眼
+	3. JavaDoc 添加注释，可自定义模板
+	4. Eclipse Code Formmater 项目之前未全部转向Studio，该插件兼容Eclipse的代码格式化风格
+	5. http://GrepCode.com Code Search 找源码必备~GrepCode IntelliJ Plugin
+	6. RestClient 模拟HTTP请求测试与服务端的通讯请求，功能强大~
+
+.......................................................Web 开发
+1、Twitter的一个开源前端开发工具包 - Bootstrap
+Bootstrap是快速开发Web应用程序的前端工具包。它是一个CSS和HTML的集合，它使用了最新的浏览器技术，给你的Web开发提供了时尚的版式，表单，buttons，表格，网格系统等等。	
+		
+2、Facebook的React JS，Google的AngularJS	
+3、Maven构建项目
+4、Spring MVC学习
+5、Android Studio
+	
