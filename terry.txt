@@ -1,6 +1,4 @@
-招商银行银行卡
-张全  6214850103987563 中关村支行
-北京市丰台区彩虹城二区   6-2-404
+
 
 http://www.vpnbook.com/webproxy
 
@@ -18,18 +16,8 @@ win7创建热点：
 开启:netsh wlan start hostednetwork
 关闭:netsh wlan stop hostednetwork
 
-Gmail邮箱：
-zhangquanit@gmail.com
-zhang196804
-
-Github账号:
-zhangquanit
-zhang196804
-
 Git代码托管:
 https://git.oschina.net
-zhangquanit@gmail.com
-zhang196804
 
 首先安装git客户端,申请github账号                                
 1、本地创建ssh key ，安装完git之后直接运行ssh命令
@@ -113,7 +101,10 @@ adb pull data/app/com.tencent.mm-2.apk com.tencent.mm.apk
 
 注意：导出的apk一般在C:\Users\zhangquan目录下
 
-//............................Java eclipse 导出doc
+-----------------------------------Monkey测试
+adb shell monkey -p com.easou.ps.lockscreen9 -v 500
+
+-----------------------------------Java eclipse 导出doc
 Java--Eclipse中生成java doc
 　　文档注释生成中文doc方法：
 　　1.项目-->右键菜单Export-->Java下Javadoc-->next：
@@ -135,34 +126,3 @@ http://www.zuiku.com/
 
 
 
-Monkey测试
-adb shell monkey -p com.easou.ps.lockscreen9 -v 500
-
-
-
-https://github.com/inmite/android-selector-chapek  
-
-	1. ADB Idea ADB操作快捷菜单，快速清除数据，重启应用，卸载应用等操作
-	2. Android Annotations 配合Annotation框架快速生成控件绑定代码，同Android ButterKnife Zeleny ，本来都是用ButterKnife，生成快速绑定代码，后面开发的都是Lib库没办法使用ButterKnife只好转Annotations库
-	3. Android Drawable Importer 做些小应用时妈妈再也不用担心我找不到图标了~需要配合google/material-design-icons · GitHub、Android Icons使用，安装后在设置菜单多出来的选项中设置
-	4. Android Parcelable Code Generator 如标题。快速生成Parcelable代码
-	5. Android Accessors 按照Google官方的开发规范，类的成员变量以m开头，此插件可快速生成成员变量的set/get方法但是不带m，评论中有人指出可以通过再Settings-CodeStyle-Java-CodeGeneration中修改前缀，经查验却是更加方便。
-	6. SelectorChapek for Android 插件库好多生成Selector的插件，还是这个用的最顺，按照不同状态(normal、pressed)的标准命名后，右键文件树Generate Android Selectors见inmite/android-selector-chapek · GitHub
-
-IntelliJ IDea通用
-	1. AceJump 快速跳转到屏幕某个位置（Ctrl+;）
-	2. FindBugs-IDEA、CheckStyle-IDEA 用自动化代替双眼
-	3. JavaDoc 添加注释，可自定义模板
-	4. Eclipse Code Formmater 项目之前未全部转向Studio，该插件兼容Eclipse的代码格式化风格
-	5. http://GrepCode.com Code Search 找源码必备~GrepCode IntelliJ Plugin
-	6. RestClient 模拟HTTP请求测试与服务端的通讯请求，功能强大~
-
-.......................................................Web 开发
-1、Twitter的一个开源前端开发工具包 - Bootstrap
-Bootstrap是快速开发Web应用程序的前端工具包。它是一个CSS和HTML的集合，它使用了最新的浏览器技术，给你的Web开发提供了时尚的版式，表单，buttons，表格，网格系统等等。	
-		
-2、Facebook的React JS，Google的AngularJS	
-3、Maven构建项目
-4、Spring MVC学习
-5、Android Studio
-	
