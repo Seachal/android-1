@@ -8,11 +8,11 @@
 7、Android设计模式源码分析  Mr.Simple
 
 反编译
-apktool+jd-gui+dex2jar
-jadx
-Smali Viewer
-ClassyShark	
-
+1.apktool+jd-gui+dex2jar
+2.jadx
+3.Smali Viewer
+4.ClassyShark	
+https://github.com/google/android-classyshark/releases
 
 Studio插件
 Gradle Dependencies Helper

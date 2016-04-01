@@ -21,8 +21,7 @@ https://git.oschina.net
 
 Ê×ÏÈ°²×°git¿Í»§¶Ë,ÉêÇëgithubÕËºÅ                                
 1¡¢±¾µØ´´½¨ssh key £¬°²×°ÍêgitÖ®ºóÖ±½ÓÔËĞĞsshÃüÁî
-ssh-keygen -t rsa -C "zhangquanit@gmail.com"  
-ssh-keygen -t rsa -C "zhangquan@bbchexian.net"  
+ssh-keygen -t rsa -C "zhangquanit@gmail.com"   
 Ò»Â·»Ø³µ¾ÍĞĞ¡£³É¹¦µÄ»°»áÔÚ~/ÏÂÉú³É.sshÎÄ¼ş¼Ğ£¬½øÈ¥£¬´ò¿ªid_rsa.pub£¬¸´ÖÆÀïÃæµÄkey¡£
 2¡¢»Øµ½github£¬½øÈëAccount Settings£¬×ó±ßÑ¡ÔñSSH Keys£¬Add SSH Key,titleËæ±ãÌî£¬Õ³Ìùkey¡£ÎªÁËÑéÖ¤ÊÇ·ñ³É¹¦£¬ÔÚgit bashÏÂÊäÈë
 $ ssh -T git@github.com  
@@ -32,8 +31,6 @@ You¡¯ve successfully authenticated, but GitHub does not provide shell access ¡£Õ
 $ git config --global user.name "zhangquanit"  
 $ git config --global user.email "zhangquanit@gmail.com"
 
-$ git config --local user.name "zhangquan"  
-$ git config --local user.email "zhangquan@bbchexian.net"
 
 ±¾µØ²Ö¿âÌá½»µ½Ô¶³Ì²Ö¿â
 $ git remote add origin git@github.com:zhangquanit/android_test.git
@@ -131,14 +128,20 @@ Enter file in which to save the key (/c/Users/zhangquan/.ssh/id_rsa): /c/Users/z
 
 »òÕß
 ÔÚĞÂÔöË½Ô¿µÄÊ±ºò£¬Í¨¹ıÖ¸¶¨²»Í¬µÄÎÄ¼şÃûÀ´Éú³É²»Í¬µÄË½Ô¿ÎÄ¼ş
-ssh-keygen -t rsa -f ~/.ssh/id_rsa_bbchexianXX -C "zhangquan@bbchexian.net"  
+ssh-keygen -t rsa -f ~/.ssh/id_rsa_codingnet -C "zhangquanit@126.com"  
 
 2.ĞÂÔösshµÄÅäÖÃÎÄ¼ş£¬ĞŞ¸ÄconfigÎÄ¼şµÄÄÚÈİ
+Host github.com
+HostName github.com
+User git
+IdentityFile /c/Users/zhangquan/.ssh/id_rsa
+Host git.coding.net
+HostName git.coding.net
+User git
+IdentityFile /c/Users/zhangquan/.ssh/id_rsa_codingnet
 
 
 
-
-ssh-keygen -t rsa -f ~/.ssh/id_rsa_beauty -C "zhangquanit@126.com"
 
 
 
