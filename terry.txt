@@ -1,15 +1,4 @@
 
-
-http://www.vpnbook.com/webproxy
-
-代理：shadowsocks
-官网:https://portal.shadowsocks.com/clientarea.php?action=productdetails&id=8963
-
-
-客户端下载:https://shadowsocks.com/client.html
-插件教程:http://kafeinai.com/73.html
-
-
 win7创建热点：
 创建或修改密码:netsh wlan set hostednetwork mode=allow ssid=zhangquan key=cys00651
 打开网络和共享中心：选择当前联网的网络....>共享....添加新建的虚拟wifi
@@ -33,7 +22,11 @@ $ git config --global user.email "zhangquanit@gmail.com"
 
 
 本地仓库提交到远程仓库
+初始化本地仓库
+$ git init  
+添加本地文件，并提交到远程仓库
 $ git remote add origin git@github.com:zhangquanit/android_test.git
+$ git push -u origin master
 
 创建tag：
 1：切换到主干（master）
@@ -76,6 +69,10 @@ git push -u origin master
 $ git add file1.txt
 $ git add file2.txt file3.txt
 $ git commit -m "add 3 files."
+$ git add *
+提交所有文件
+$ git add dir/* 
+提交dir文件夹下的所有文件      
 第二步，使用命令git commit，完成。
 二、时光穿梭机
 1、版本回退
@@ -87,12 +84,25 @@ $ git diff  <file>
 $ git log
 如果嫌输出信息太多，看得眼花缭乱的，可以试试加上--pretty=oneline参数
 $ git log --pretty=oneline
+查看某一个文件的提交历史
+$ git log <file>
+$ git log -p <file>
 查看提交记录
 $ git reflog
 回退到上一个版本
 $ git reset --hard HEAD^
 回退到指定版本
 $ git reset --hard <commit_id>   (commitID可通过git log 或者git reflog查看)
+还原工作区修改(未add进暂存区)
+$ git checkout -- <file>
+查看历史修改内容
+$ git whatchanged 
+diff 两次的commit
+$ git diff <commit_id>
+查看最近一次的修改内容
+$ git show
+查看某个人的修改
+$ git log --author=zhangquanit
 
 HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令git reset --hard commit_id。
 穿梭前，用git log可以查看提交历史，以便确定要回退到哪个版本。
@@ -109,10 +119,33 @@ HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令git r
 
 3、管理修改
 Git跟踪并管理的是修改，而非文件。
-比如$ git add <file> 后，但是没有commit，此时继续修改file，然后commit ，
+比如$ git add <file> 后，但是没有commit，此时继续修改file，然后commit，
 会发现第二次修改的内容并没有提交。
 当你用git add命令后，在工作区的第一次修改被放入暂存区，准备提交，但是，在工作区的第二次修改并没有放入暂存区，
 所以，git commit只负责把暂存区的修改提交了，也就是第一次的修改被提交了，第二次的修改不会被提交。
+
+分支管理
+1.查看分支：git branch
+查看所有分支(包括远程分支) git branch -a
+2.创建分支：git branch <name>
+3.切换分支：git checkout <name>
+4.创建+切换分支：git checkout -b <name>
+5.合并某分支到当前分支：git merge <name>
+6.删除分支：git branch -d <name>
+7.提交分支到远程仓库 git push origin <name>
+8.测试从远程获取dev:  git pull origin dev
+9.运行 git fetch，可以将远程分支信息获取到本地，
+再运行 git checkout -b local-branchname origin/remote_branchname  就可以将远程分支映射到本地命名为local-branchname  的一分支
+
+我觉得现在重要的就是设置git push,pull默认的提交获取分支,这样就很方便的使用git push 提交信息或git pull获取信息
+git branch --set-upstream-to=origin/dev
+取消对master的跟踪
+git branch --unset-upstream master
+现在随便修改一下工程文件的内容,然后git commit ,git push,之后就可以直接提交到远程的dev分支中,而不会是master
+
+ 
+
+
 
 
 
@@ -199,7 +232,4 @@ http://www.alexa.cn/
 
 H5网页、游戏编辑工具
 http://www.zuiku.com/
-
-
-
 
