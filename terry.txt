@@ -1,57 +1,64 @@
 
-win7�����ȵ㣺
-�������޸�����:netsh wlan set hostednetwork mode=allow ssid=zhangquan key=cys00651
-������͹������ģ�ѡ��ǰ����������....>����....�����½�������wifi
-����:netsh wlan start hostednetwork
-�ر�:netsh wlan stop hostednetwork
+win7创建热点：
+创建或修改密码:netsh wlan set hostednetwork mode=allow ssid=zhangquan key=cys00651
+打开网络和共享中心：选择当前联网的网络....>共享....添加新建的虚拟wifi
+开启:netsh wlan start hostednetwork
+关闭:netsh wlan stop hostednetwork
 
-Git�����й�:
+genymotion
+1、解决无法上网的问题
+http://blog.csdn.net/yellowanwu/article/details/49392245
+2、解决输入中文问题
+运行genymotion软件进入主界面后，在要运行的模拟手机的右侧点工具样子的"设置"图标,
+在弹出的“device setting”界面最后一项“use virtual keyboard for typing”中打勾
+
+Git代码托管:
 https://git.oschina.net
 
-���Ȱ�װgit�ͻ���,����github�˺�                                
-1�����ش���ssh key ����װ��git֮��ֱ������ssh����
+首先安装git客户端,申请github账号                                
+1、本地创建ssh key ，安装完git之后直接运行ssh命令
 ssh-keygen -t rsa -C "zhangquanit@gmail.com"   
-һ·�س����С��ɹ��Ļ�����~/������.ssh�ļ��У���ȥ����id_rsa.pub�����������key��
-2���ص�github������Account Settings�����ѡ��SSH Keys��Add SSH Key,title����ճ��key��Ϊ����֤�Ƿ�ɹ�����git bash������
+一路回车就行。成功的话会在~/下生成.ssh文件夹，进去，打开id_rsa.pub，复制里面的key。
+2、回到github，进入Account Settings，左边选择SSH Keys，Add SSH Key,title随便填，粘贴key。为了验证是否成功，在git bash下输入
 $ ssh -T git@github.com  
-����ǵ�һ�εĻ���ʾ�Ƿ�continue������yes�ͻῴ����
-You��ve successfully authenticated, but GitHub does not provide shell access ����ͱ�ʾ�ѳɹ�����github��
-3�������˺�
+如果是第一次的会提示是否continue，输入yes就会看到：
+You’ve successfully authenticated, but GitHub does not provide shell access 。这就表示已成功连上github。
+3、配置账号
 $ git config --global user.name "zhangquanit"  
 $ git config --global user.email "zhangquanit@gmail.com"
 
 
-���زֿ��ύ��Զ�ֿ̲�
-��ʼ�����زֿ�
+本地仓库提交到远程仓库
+初始化本地仓库
 $ git init  
-���ӱ����ļ������ύ��Զ�ֿ̲�
+添加本地文件，并提交到远程仓库
 $ git remote add origin git@github.com:zhangquanit/android_test.git
 $ git push -u origin master
 
-����tag��
-1���л������ɣ�master��
-2����ʼ������ǩ��������ǩ�����ַ�ʽ��
-   1��$ git tag -a v100 -m "add v100"  //������ǩ�� -a �ӱ�ǩ��-m  �ӱ�ǩע�͡�
-   2��$ git tag v100                       //������������ǩ������-a��-m�Ȳ���
-3���鿴�����ı�ǩ
-   $ git tag  //�г�git�����е����б�ǩ
-   $ git show v100    //git show ����鿴��Ӧ��ǩ�İ汾��Ϣ������ͬ��ʾ���ǩʱ���ύ����
-4������-f ����ԭ�е�tag
+创建tag：
+1：切换到主干（master）
+2：开始创建标签，创建标签的两种方式：
+   1：$ git tag -a v100 -m "add v100"  //创建标签， -a 加标签，-m  加标签注释。
+   2：$ git tag v100                       //创建轻量级标签，不用-a，-m等参数
+3：查看创建的标签
+   $ git tag  //列出git中现有的所有标签
+   $ git show v100    //git show 命令查看相应标签的版本信息，并连同显示打标签时的提交对象
+4：加上-f 覆盖原有的tag
 git tag -f v100
-5�����Ҫһ���������б��������ı�ǩ��ȥ������ʹ�� --tags ѡ�$ git push origin --tags��
-��ͨ��git push origin master�����������ͱ�ǩ���������ˡ�
-����ָ���ı�ǩ��$ git push origin  v100 
-6��ɾ����ǩ��  git tag -d v100��ɾ����������ǩ��git push origin :refs/tags/lilerong
+5：如果要一次推送所有本地新增的标签上去，可以使用 --tags 选项：$ git push origin --tags，
+普通的git push origin master操作不会推送标签到服务器端。
+推送指定的标签：$ git push origin  v100 
+6：删除标签：  git tag -d v100，删除服务器标签：git push origin :refs/tags/lilerong
 
 
 
 
 
 //.............................................................
-1.Git ȫ������:
+1.Git 全局设置:
 git config --global user.name "terry_zhang"
 git config --global user.email "zhangquanit@gmail.com"
-2.���� git �ֿ�:
+2.创建 git 仓库:
 mkdir umeng
 cd umeng
 git init
@@ -62,88 +69,88 @@ git remote add origin https://git.oschina.net/terry_zhang/umeng.git
 git push -u origin master
 
 //----------------------------------------
-һ����ʼ���ֿ�
-1.��ʼ��һ��Git�ֿ⣬ʹ��git init���
-2.�����ļ���Git�ֿ⣬��������
-��һ����ʹ������git add <file>��ע�⣬�ɷ������ʹ�ã����Ӷ���ļ�,���磺
+一、初始化仓库
+1.初始化一个Git仓库，使用git init命令。
+2.添加文件到Git仓库，分两步：
+第一步，使用命令git add <file>，注意，可反复多次使用，添加多个文件,比如：
 $ git add file1.txt
 $ git add file2.txt file3.txt
 $ git commit -m "add 3 files."
 $ git add *
-�ύ�����ļ�
+提交所有文件
 $ git add dir/* 
-�ύdir�ļ����µ������ļ�      
-�ڶ�����ʹ������git commit����ɡ�
-����ʱ�⴩���
-1���汾����
-�鿴�ֿ⵱ǰ��״̬
-git status�������������ʱ�����ղֿ⵱ǰ��״̬
-�鿴�ļ��޸�����
+提交dir文件夹下的所有文件      
+第二步，使用命令git commit，完成。
+二、时光穿梭机
+1、版本回退
+查看仓库当前的状态
+git status命令可以让我们时刻掌握仓库当前的状态
+查看文件修改内容
 $ git diff  <file>
-�鿴��ʷ��¼
+查看历史记录
 $ git log
-����������Ϣ̫�࣬�����ۻ����ҵģ��������Լ���--pretty=oneline����
+如果嫌输出信息太多，看得眼花缭乱的，可以试试加上--pretty=oneline参数
 $ git log --pretty=oneline
-�鿴ĳһ���ļ����ύ��ʷ
+查看某一个文件的提交历史
 $ git log <file>
 $ git log -p <file>
-�鿴�ύ��¼
+查看提交记录
 $ git reflog
-���˵���һ���汾
+回退到上一个版本
 $ git reset --hard HEAD^
-���˵�ָ���汾
-$ git reset --hard <commit_id>   (commitID��ͨ��git log ����git reflog�鿴)
-��ԭ�������޸�(δadd���ݴ���)
+回退到指定版本
+$ git reset --hard <commit_id>   (commitID可通过git log 或者git reflog查看)
+还原工作区修改(未add进暂存区)
 $ git checkout -- <file>
-�鿴��ʷ�޸�����
+查看历史修改内容
 $ git whatchanged 
-diff ���ε�commit
+diff 两次的commit
 $ git diff <commit_id>
-�鿴���һ�ε��޸�����
+查看最近一次的修改内容
 $ git show
-�鿴ĳ���˵��޸�
+查看某个人的修改
 $ git log --author=zhangquanit
 
-HEADָ��İ汾���ǵ�ǰ�汾����ˣ�Git���������ڰ汾����ʷ֮�䴩��ʹ������git reset --hard commit_id��
-����ǰ����git log���Բ鿴�ύ��ʷ���Ա�ȷ��Ҫ���˵��ĸ��汾��
-Ҫ�ط�δ������git reflog�鿴������ʷ���Ա�ȷ��Ҫ�ص�δ�����ĸ��汾��
+HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令git reset --hard commit_id。
+穿梭前，用git log可以查看提交历史，以便确定要回退到哪个版本。
+要重返未来，用git reflog查看命令历史，以便确定要回到未来的哪个版本。
 
-2�����������ݴ���
-2.1��������
-2.2���ݴ���
-���ļ���Git�汾�������ӵ�ʱ���Ƿ�����ִ�еģ�
-��һ������git add���ļ����ӽ�ȥ��ʵ���Ͼ��ǰ��ļ��޸����ӵ��ݴ����� ��ʱ��Ҳ���Գ�����$ git reset --hard <file>
-�ڶ�������git commit�ύ���ģ�ʵ���Ͼ��ǰ��ݴ��������������ύ����ǰ��֧��
-���Ǵ���Git�汾��ʱ��Git�Զ�Ϊ���Ǵ�����Ψһһ��master��֧�����ԣ����ڣ�git commit������master��֧���ύ���ġ�
-����Լ�����Ϊ����Ҫ�ύ���ļ��޸�ͨͨ�ŵ��ݴ�����Ȼ��һ�����ύ�ݴ����������޸ġ�
+2、工作区与暂存区
+2.1、工作区
+2.2、暂存区
+把文件往Git版本库里添加的时候，是分两步执行的：
+第一步是用git add把文件添加进去，实际上就是把文件修改添加到暂存区； 这时候也可以撤销，$ git reset --hard <file>
+第二步是用git commit提交更改，实际上就是把暂存区的所有内容提交到当前分支。
+我们创建Git版本库时，Git自动为我们创建了唯一一个master分支，所以，现在，git commit就是往master分支上提交更改。
+你可以简单理解为，需要提交的文件修改通通放到暂存区，然后，一次性提交暂存区的所有修改。
 
-3�������޸�
-Git���ٲ����������޸ģ������ļ���
-����$ git add <file> �󣬵���û��commit����ʱ�����޸�file��Ȼ��commit��
-�ᷢ�ֵڶ����޸ĵ����ݲ�û���ύ��
-������git add������ڹ������ĵ�һ���޸ı������ݴ�����׼���ύ�����ǣ��ڹ������ĵڶ����޸Ĳ�û�з����ݴ�����
-���ԣ�git commitֻ������ݴ������޸��ύ�ˣ�Ҳ���ǵ�һ�ε��޸ı��ύ�ˣ��ڶ��ε��޸Ĳ��ᱻ�ύ��
+3、管理修改
+Git跟踪并管理的是修改，而非文件。
+比如$ git add <file> 后，但是没有commit，此时继续修改file，然后commit，
+会发现第二次修改的内容并没有提交。
+当你用git add命令后，在工作区的第一次修改被放入暂存区，准备提交，但是，在工作区的第二次修改并没有放入暂存区，
+所以，git commit只负责把暂存区的修改提交了，也就是第一次的修改被提交了，第二次的修改不会被提交。
 
-��֧����
-1.�鿴��֧��git branch
-�鿴���з�֧(����Զ�̷�֧) git branch -a
-2.������֧��git branch <name>
-3.�л���֧��git checkout <name>
-4.����+�л���֧��git checkout -b <name>
-5.�ϲ�ĳ��֧����ǰ��֧��git merge <name>
-6.ɾ����֧��git branch -d <name>
-7.�ύ��֧��Զ�ֿ̲� git push origin <name>
-8.���Դ�Զ�̻�ȡdev:  git pull origin dev
-9.���� git fetch�����Խ�Զ�̷�֧��Ϣ��ȡ�����أ�
-������ git checkout -b local-branchname origin/remote_branchname  �Ϳ��Խ�Զ�̷�֧ӳ�䵽��������Ϊlocal-branchname  ��һ��֧
+分支管理
+1.查看分支：git branch
+查看所有分支(包括远程分支) git branch -a
+2.创建分支：git branch <name>
+3.切换分支：git checkout <name>
+4.创建+切换分支：git checkout -b <name>
+5.合并某分支到当前分支：git merge <name>
+6.删除分支：git branch -d <name>
+7.提交分支到远程仓库 git push origin <name>
+8.测试从远程获取dev:  git pull origin dev
+9.运行 git fetch，可以将远程分支信息获取到本地，
+再运行 git checkout -b local-branchname origin/remote_branchname  就可以将远程分支映射到本地命名为local-branchname  的一分支
 
-�Ҿ���������Ҫ�ľ�������git push,pullĬ�ϵ��ύ��ȡ��֧,�����ͺܷ����ʹ��git push �ύ��Ϣ��git pull��ȡ��Ϣ
+我觉得现在重要的就是设置git push,pull默认的提交获取分支,这样就很方便的使用git push 提交信息或git pull获取信息
 git branch --set-upstream-to=origin/dev
-ȡ����master�ĸ���
+取消对master的跟踪
 git branch --unset-upstream master
-��������޸�һ�¹����ļ�������,Ȼ��git commit ,git push,֮��Ϳ���ֱ���ύ��Զ�̵�dev��֧��,��������master
+现在随便修改一下工程文件的内容,然后git commit ,git push,之后就可以直接提交到远程的dev分支中,而不会是master
 
-git branch -vv :�鿴���ط�֧���ٵ�Զ�̷�֧
+git branch -vv :查看本地分支跟踪的远程分支
 
  
 
@@ -152,20 +159,20 @@ git branch -vv :�鿴���ط�֧���ٵ�Զ�̷�֧
 
 
 
-//---------------------���ö���˺�
-�ο���http://blog.csdn.net/chaihuasong/article/details/37886139
+//---------------------配置多个账号
+参考：http://blog.csdn.net/chaihuasong/article/details/37886139
 
-1.����SSH
+1.生成SSH
 $ ssh-keygen -t rsa -C "zhangquan@bbchexian.net"
 Generating public/private rsa key pair.
 Enter file in which to save the key (/c/Users/zhangquan/.ssh/id_rsa): /c/Users/zhangquan/.ssh/id_rsa_bbchexian
-ע�⣺ָ��˽Կ�ļ���id_rsa_bbchexian
+注意：指定私钥文件名id_rsa_bbchexian
 
-����
-������˽Կ��ʱ��ͨ��ָ����ͬ���ļ��������ɲ�ͬ��˽Կ�ļ�
+或者
+在新增私钥的时候，通过指定不同的文件名来生成不同的私钥文件
 ssh-keygen -t rsa -f ~/.ssh/id_rsa_codingnet -C "zhangquanit@126.com"  
 
-2.����ssh�������ļ����޸�config�ļ�������
+2.新增ssh的配置文件，修改config文件的内容
 Host github.com
 HostName github.com
 User git
@@ -180,59 +187,59 @@ IdentityFile /c/Users/zhangquan/.ssh/id_rsa_codingnet
 
 
 
-//..................................................................��������
+//..................................................................常用命令
 
-��ѯadb�˿�ռ�ý���
+查询adb端口占用进程
 netstat -aon|findstr "5037"
-��ѯ���Ǹ�Ӧ��ռ�õĽ���
+查询是那个应用占用的进程
 tasklist|findstr "988"
-ɱ������
-taskkill/pid ���̺� /f
-ɾ������ʹ�õ��ļ�
-cmd --���롰��Դ��������-->cpu-->�����ľ��,��������ɾ�����ļ����Ҽ� ���������̡�
+杀死进程
+taskkill/pid 进程号 /f
+删除正在使用的文件
+cmd --输入“资源监视器”-->cpu-->关联的句柄,搜索你想删除的文件，右键 “结束进程”
 
-�鿴������־��
+查看错误日志：
 adb logcat | findstr "AndroidRuntime"
-adb shell��ʹ��:
+adb shell中使用:
 logcat | grep "AndroidRuntime"
 
 ....................................adb shell dumpsys
-����adb shell dumpsys����������dump��ϵͳ����ʱ��״̬��Ϣ
-1���鿴ջ����Activity
+利用adb shell dumpsys这条命令来dump出系统运行时的状态信息
+1、查看栈顶的Activity
 adb shell dumpsys activity top
-adb shell dumpsys activity top grep | more   ��ҳ��ʾ������鿴
-2���鿴��ǰActivityջ��Ϣ
+adb shell dumpsys activity top grep | more   分页显示，方便查看
+2、查看当前Activity栈信息
 adb shell dumpsys activity | sed -n -e '/Stack #/p' -e '/Running activities/,/Run #0/p'
                  
------------------------------------�����Ѱ�װ��apk��                    
-adb pull data/app/����-1.apk  xx.apk 
-�� adb pull data/app/����-2.apk  xx.apk 
-���磺
+-----------------------------------导出已安装的apk：                    
+adb pull data/app/包名-1.apk  xx.apk 
+或 adb pull data/app/包名-2.apk  xx.apk 
+比如：
 adb pull data/app/com.tencent.mm-1.apk com.tencent.mm.apk
 adb pull data/app/com.tencent.mm-2.apk com.tencent.mm.apk
 
-ע�⣺������apkһ����C:\Users\zhangquanĿ¼��
+注意：导出的apk一般在C:\Users\zhangquan目录下
 
------------------------------------Monkey����
+-----------------------------------Monkey测试
 adb shell monkey -p com.easou.ps.lockscreen9 -v 500
 
------------------------------------Java eclipse ����doc
-Java--Eclipse������java doc
-�����ĵ�ע����������doc������
-����1.��Ŀ-->�Ҽ��˵�Export-->Java��Javadoc-->next��
-����<1>javadoc command:����Ҫ���õ�javadoc.exe�������޸ģ�eclipse���ҵ��ģ�
-����<2>use standard doclet:����Ҫ���ɵ���Ŀ¼���Զ���һ���ļ�����Ϊ���Ŀ¼[��Ȼһ���]��
-����<3>Ĭ�ϼ���next-->��next-->
-����<4>��ʱ�����Ŀ���õ���UTF-8���룬Extra Javadoc options����Ҫ�����趨������-encoding utf-8 -charset utf-8�������ɵ���ҳ����ע�Ͷ������롣
-����<5>���Finish��ɡ�
-�����ڹ��̵�doc Ŀ¼�У�����Javadoc �ĵ���
+-----------------------------------Java eclipse 导出doc
+Java--Eclipse中生成java doc
+　　文档注释生成中文doc方法：
+　　1.项目-->右键菜单Export-->Java下Javadoc-->next：
+　　<1>javadoc command:就是要调用的javadoc.exe，不用修改，eclipse会找到的；
+　　<2>use standard doclet:就是要生成到的目录，自定义一个文件夹作为存放目录[不然一大堆]；
+　　<3>默认即可next-->再next-->
+　　<4>此时如果项目采用的是UTF-8编码，Extra Javadoc options下需要输入设定参数：-encoding utf-8 -charset utf-8否则生成的网页中文注释都是乱码。
+　　<5>最后Finish完成。
+　　在工程的doc 目录中，就有Javadoc 文档了
 
 
-//...............................................���ù���
-��ѯ��վ����
+//...............................................常用工具
+查询网站流量
 http://www.alexa.cn/
 
-H5��ҳ����Ϸ�༭����
+H5网页、游戏编辑工具
 http://www.zuiku.com/
 
 //-----------------retrofit2
