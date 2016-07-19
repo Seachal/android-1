@@ -143,6 +143,8 @@ git branch --set-upstream-to=origin/dev
 git branch --unset-upstream master
 现在随便修改一下工程文件的内容,然后git commit ,git push,之后就可以直接提交到远程的dev分支中,而不会是master
 
+git branch -vv :查看本地分支跟踪的远程分支
+
  
 
 
@@ -233,3 +235,21 @@ http://www.alexa.cn/
 H5网页、游戏编辑工具
 http://www.zuiku.com/
 
+//-----------------retrofit2
+https://mp.weixin.qq.com/s?__biz=MzA3NTYzODYzMg==&mid=2653577186&idx=1&sn=1a5f6369faeb22b4b68ea39f25020d28&scene=0&key=f5c31ae61525f82eff1e94d54c4abd1c47958e9f7fe5751f2d201958841a354f0423e4ce98cb895058808f330921bde6&ascene=0&uin=MTYzMjY2MTE1&devicetype=iMac+MacBookPro10%2C1+OSX+OSX+10.11.4+build(15E65)&version=11020201&pass_ticket=rsJxex9Bn1eN7iJgW6FUI2KG3V9O6e3TH42j1U%2Fy5SU%3D
+http://zhaoshanshan.me/2015/10/12/Retrofit2-%E6%9B%B4%E6%96%B0%E6%8C%87%E5%8D%97/
+http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0915/3460.html
+http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/1016/3588.html
+https://realm.io/cn/news/droidcon-jake-wharton-simple-http-retrofit-2/
+http://blog.csdn.net/u012301841/article/details/49685677
+http://www.cnblogs.com/angeldevil/p/3757335.html
+http://www.jcodecraeer.com/plus/search.php?kwtype=0&q=retrofit
+http://zhaoshanshan.me/2015/10/12/Retrofit2-%E6%9B%B4%E6%96%B0%E6%8C%87%E5%8D%97/
+http://www.loongwind.com/archives/242.html
+http://stackoverflow.com/questions/32514410/logging-with-retrofit-2
+http://stackoverflow.com/questions/34791244/retrofit2-modifying-request-body-in-okhttp-interceptor
+http://blog.csdn.net/u014165119/article/details/49280779
+http://blog.csdn.net/adzcsx2/article/details/51329485
+http://stackoverflow.com/questions/21398598/how-to-post-raw-whole-json-in-the-body-of-a-retrofit-request/21423093#21423093
+http://stackoverflow.com/questions/23070298/get-nested-json-object-with-gson-using-retrofit/23071080#23071080
+http://www.jianshu.com/p/2b0aeb6b6b61
