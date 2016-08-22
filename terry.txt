@@ -46,7 +46,6 @@ git tag -f v100
 
 
 
-
 //.............................................................
 1.Git 全局设置:
 git config --global user.name "terry_zhang"
@@ -137,6 +136,12 @@ Git跟踪并管理的是修改，而非文件。
 9.运行 git fetch，可以将远程分支信息获取到本地，
 再运行 git checkout -b local-branchname origin/remote_branchname  就可以将远程分支映射到本地命名为local-branchname  的一分支
 
+10、合并dev分支到master：
+1）切换当前分支到master
+$ git checkout master
+2）把dev分支中的内容Merge进来：
+$ git merge dev
+
 我觉得现在重要的就是设置git push,pull默认的提交获取分支,这样就很方便的使用git push 提交信息或git pull获取信息
 git branch --set-upstream-to=origin/dev
 取消对master的跟踪
@@ -144,6 +149,8 @@ git branch --unset-upstream master
 现在随便修改一下工程文件的内容,然后git commit ,git push,之后就可以直接提交到远程的dev分支中,而不会是master
 
 git branch -vv :查看本地分支跟踪的远程分支
+
+
 
  
 
@@ -203,6 +210,7 @@ adb shell dumpsys activity top
 adb shell dumpsys activity top grep | more   分页显示，方便查看
 2、查看当前Activity栈信息
 adb shell dumpsys activity | sed -n -e '/Stack #/p' -e '/Running activities/,/Run #0/p'
+adb shell dumpsys activity activities | sed -En -e '/Running activities/,/Run #0/p'
                  
 -----------------------------------导出已安装的apk：                    
 adb pull data/app/包名-1.apk  xx.apk 
