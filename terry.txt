@@ -1,9 +1,15 @@
-
 win7创建热点：
 创建或修改密码:netsh wlan set hostednetwork mode=allow ssid=zhangquan key=cys00651
 打开网络和共享中心：选择当前联网的网络....>共享....添加新建的虚拟wifi
 开启:netsh wlan start hostednetwork
 关闭:netsh wlan stop hostednetwork
+
+genymotion
+1、解决无法上网的问题
+http://blog.csdn.net/yellowanwu/article/details/49392245
+2、解决输入中文问题
+运行genymotion软件进入主界面后，在要运行的模拟手机的右侧点工具样子的"设置"图标,
+在弹出的“device setting”界面最后一项“use virtual keyboard for typing”中打勾
 
 Git代码托管:
 https://git.oschina.net
@@ -42,6 +48,7 @@ git tag -f v100
 普通的git push origin master操作不会推送标签到服务器端。
 推送指定的标签：$ git push origin  v100 
 6：删除标签：  git tag -d v100，删除服务器标签：git push origin :refs/tags/lilerong
+
 
 
 
@@ -136,12 +143,6 @@ Git跟踪并管理的是修改，而非文件。
 9.运行 git fetch，可以将远程分支信息获取到本地，
 再运行 git checkout -b local-branchname origin/remote_branchname  就可以将远程分支映射到本地命名为local-branchname  的一分支
 
-10、合并dev分支到master：
-1）切换当前分支到master
-$ git checkout master
-2）把dev分支中的内容Merge进来：
-$ git merge dev
-
 我觉得现在重要的就是设置git push,pull默认的提交获取分支,这样就很方便的使用git push 提交信息或git pull获取信息
 git branch --set-upstream-to=origin/dev
 取消对master的跟踪
@@ -149,8 +150,6 @@ git branch --unset-upstream master
 现在随便修改一下工程文件的内容,然后git commit ,git push,之后就可以直接提交到远程的dev分支中,而不会是master
 
 git branch -vv :查看本地分支跟踪的远程分支
-
-
 
  
 
@@ -210,7 +209,6 @@ adb shell dumpsys activity top
 adb shell dumpsys activity top grep | more   分页显示，方便查看
 2、查看当前Activity栈信息
 adb shell dumpsys activity | sed -n -e '/Stack #/p' -e '/Running activities/,/Run #0/p'
-adb shell dumpsys activity activities | sed -En -e '/Running activities/,/Run #0/p'
                  
 -----------------------------------导出已安装的apk：                    
 adb pull data/app/包名-1.apk  xx.apk 
