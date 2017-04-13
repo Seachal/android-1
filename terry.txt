@@ -152,9 +152,40 @@ git branch --unset-upstream master
 git branch -vv :查看本地分支跟踪的远程分支
 
  
+暂存代码
+当我们在某个分支上修改代码时，可能需要临时切换到其他分支，但是又不想把本地代码提交到服务器，所以就需要暂存代码
+查看暂存记录 git stash list 
+恢复暂存记录 git stash apply {记录}  恢复后可以将当前暂存记录删除了
+清除所有的暂存记录  git stash clear   
 
+Git的submodule功能
+参考：http://www.open-open.com/lib/view/open1396404725356.html
+项目的版本库在某些情况下需要引用其他版本库中的文件,例如有一套公用的代码库，可以被多个项目调用
+Git 子模块功能允许你将一个Git仓库当作另外一个Git仓库的子目录。这允许你克隆另外一个仓库到你的项目中并且保持你的提交相对独立。
+在仓库目录下新建.gitmodules文件，然后在文件里面添加依赖的module项目git地址，比如：
+[submodule "library/basetools"]
+	path = library/basetools
+	url = git@git.mapbar.com:3in1/basetools.git
+[submodule "library/core_framework"]
+	path = library/core_framework
+	url = git@git.mapbar.com:3in1/core_framework.git
+[submodule "library/net"]
+	path = library/net
+	url = git@git.mapbar.com:3in1/new_net.git
+[submodule "library/search"]
+	path = library/search
+	url = git@git.mapbar.com:3in1/newsearch.git
+[submodule "library/umeng"]
+	path = library/umeng
+	url = git@git.mapbar.com:3in1/umeng_social.git
+[submodule "library/violation"]
+	path = library/violation
+	url = git@git.mapbar.com:3in1/violation.git
+[submodule "library/webview"]
+	path = library/webview
+	url = git@git.mapbar.com:3in1/webview.git
 
-
+注意：path为相对于主项目的路径
 
 
 
@@ -172,14 +203,14 @@ Enter file in which to save the key (/c/Users/zhangquan/.ssh/id_rsa): /c/Users/z
 ssh-keygen -t rsa -f ~/.ssh/id_rsa_codingnet -C "zhangquanit@126.com"  
 
 2.新增ssh的配置文件，修改config文件的内容
-Host github.com
+Host github.com                 
 HostName github.com
-User git
-IdentityFile /c/Users/zhangquan/.ssh/id_rsa
-Host git.coding.net
-HostName git.coding.net
-User git
-IdentityFile /c/Users/zhangquan/.ssh/id_rsa_codingnet
+IdentityFile C:\\Users\\zhangquan\\.ssh\\id_rsa_github
+User zhangquan
+Host git.mapbar.com                 
+HostName git.mapbar.com
+IdentityFile C:\\Users\\zhangquan\\.ssh\\id_rsa
+User zhangquan
 
 
 
