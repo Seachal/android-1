@@ -1,11 +1,15 @@
 linux命令############
 
+使用 sudo 命令暂时成为 root
+sudo su
+
 基本命令
 ~表示home目录，比如：
 cd ~ 进入home目录
 touch ~/test 则会在home目录下生成test文件
 pwd 查看当前目录
 open <file> 打开文件或文件夹
+clear 清除控制台内容
 
 
 
@@ -17,7 +21,7 @@ vim <file> 打开一个文件，如果没有则创建。
 点击键盘的 “Esc”  如果保存退出文件 就是 :wq  不保存退出 :q   不保存强制退出 :q!
 
 二、文件操作命令
-touch <file> 创建一个空文件
+touch <file> 创建一个不存在的空文件
 mkdir <dir> 创建文件夹 
 mkdir -p <dir1/dir2/dir3> 创建多级文件目录
 

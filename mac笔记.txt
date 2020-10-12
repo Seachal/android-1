@@ -22,20 +22,27 @@ open -a TextEdit 通过命令快速打开<文本编辑器>
 查看IP地址：ifconfig | grep "inet " | grep -v 127.0.0.1
 
 
-一、配置path导致vi等命令失效
-command  not found
-原因：因为设置export PATH=/路径/conf，导致删除 $PATH 中其他的所有目录。
-解决方法：
-1. terminal中输入： export PATH=/usr/bin:/usr/sbin:/bin:/sbin:/usr/X11R6/bin
-2. 继续输入：cd ~/
-3. 继续输入：touch .bash_profile
-4. 继续输入：open .bash_profile 记事本形式打开bash_profile  
-5. 在记事本添加：export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"
-6. 保存，关闭记事本
-7. 如果想立即生效，输入source .bash_profile
 
 二、配置环境变量
+添加环境变量
+export PATH="$PATH:/jdk//bin"
+如果在命令窗口添加的，则关闭窗口后失效。
+如果修改profile文件，则可以永久生效。
+
+
+
 1、对所有用户生效 /etc/profile
+
+export M2_HOME=/Users/zhangquan/Applications/apache-maven-3.5.0
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home
+PATH=/usr/local/bin:/usr/local/sbin:~/bin:$PATH:$M2_HOME/bin:$JAVA_HOME/bin
+export PATH
+
+使用以下命令可以使配置文件立刻生效
+source /etc/profile
+
+打印
+echo $PATH
 
 
 2、如果只对当前用户生效 /User/<用户名>/.bash_profile
@@ -46,6 +53,12 @@ export M2_HOME=/Users/zhangquan/Applications/apache-maven-3.5.0
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home
 PATH=/usr/local/bin:/usr/local/sbin:~/bin:$PATH:$M2_HOME/bin:$JAVA_HOME/bin
 export PATH
+
+使用以下命令可以使配置文件立刻生效
+source .bash_profile
+
+打印
+echo $PATH
 
 3、查询环境变量
 在命令行输入 env
